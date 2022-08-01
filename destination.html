@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png"> -->
+  <link rel="icon" type="image/png" href="travlfav.png">
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+      rel="stylesheet">
+      <!-- <link rel="stylesheet" href="css/all.min.css"> -->
+    <!-- <link rel="stylesheet" href="css/fontawesome.min.css"> -->
+    <script src="https://kit.fontawesome.com/582c89d25c.js" crossorigin="anonymous"></script>
+
+
+      
+  <!-- Our custom CSS -->
+  <link rel="stylesheet" href="index.css">
+  <title>Frontend Mentor | Space tourism website</title>
+  <script src="navigation.js" defer></script>
+  <script src="tabs.js" defer></script>
+</head>
+
+<body class="destination">
+  <a class="skip-to-content" href="#main">Skip to content</a>
+  <header class="primary-header flex">
+    <div>
+      <img src="lion.png" alt="space tourism logo" class="logo">
+    </div>
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation"><i class="fa-solid fa-bars fa-2x" style="color: #fff" aria-hidden="true"></i></button>
+    <nav>
+        <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+            <li><a class="ff-sans-cond uppercase text-yellow letter-spacing-2" href="index.html">Home</a>
+            <li class="active"><a class="ff-sans-cond uppercase text-yellow letter-spacing-2" href="destination.html">Location</a>
+            <li><a class="ff-sans-cond uppercase text-yellow letter-spacing-2" href="crew.html">Team</a>
+            <li><a class="ff-sans-cond uppercase text-yellow letter-spacing-2" href="technology.html">Vehicles</a>
+        </ul>
+    </nav>
+  </header>
+  
+  <body>
+  <main id="main" class="grid-container grid-container--destination flow">
+    <h1 class="numbered-title"><span aria-hidden="true">01</span> Pick your location</h1>
+    <img id="city" src="blucity.jpg" alt="kisumu" width="550px" height="475px">
+    
+    <picture hidden id="kisumu-image">
+      <source srcset="kis.webp" width="100px" height="100px" type="image/webp"> 
+      <img src="kisumu.jpg" width="100px" height="100px" alt="kisumu">
+    </picture>
+    <picture hidden id="nakuru-image">
+      <source srcset="naks.webp" type="image/webp">
+      <img src="nakuru.jpg" alt="the planet mars">
+    </picture>
+    <picture hidden id="nairobi-image">
+      <source srcset="Nairo.webp" type="image/webp">
+      <img src="Nairobi.jpg" alt="the planet europa">
+    </picture>
+    <picture hidden id="mombasa-image">
+      <source srcset="momba.webp" type="image/webp">
+      <img src="mombasa.jpg" alt="the moon titan">
+    </picture>
+    
+    
+    <div class="tab-list underline-indicators flex" role="tablist" aria-label="destination list">
+        <button aria-selected="true" role="tab" aria-controls="moon-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" data-image="moon-image">Kisumu</button>
+        <button aria-selected="false" role="tab" aria-controls="mars-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="-1" data-image="mars-image">Nakuru</button>
+        <button aria-selected="false" role="tab" aria-controls="europa-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="-1" data-image="europa-image">Nairobi</button>
+        <button aria-selected="false" role="tab" aria-controls="titan-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="-1" data-image="titan-image">Mombasa</button>
+    </div>
+
+    <!-- The moon -->
+    <article class="destination-info flow" id="moon-tab" tabindex="0" role="tabpanel">
+      <h2 class="fs-800 uppercase ff-serif">Kisumu</h2>
+
+      <p>is the third-largest city in Kenya after the capital, Nairobi, and 
+        the coastal city of Mombasa. It is the third-largest city (after 
+        Kampala, Uganda and Mwanza, Tanzania) in the Lake Victoria Basin. Kisumu 
+        is not far from Kogelo, a village known for being the hometown of 
+        Barack Obama Sr., the father to the 44th president of the United States</p>
+      
+      <div class="destination-meta flex">
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Avg. distance</h3>
+          <p class="ff-serif uppercase">3300 km</p>
+        </div>
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Est. travel time</h3>
+          <p class="ff-serif uppercase">6 hrs</p>
+        </div>
+      </div>
+    </article>
+    
+    <!-- Mars -->
+    <article hidden class="destination-info flow" id="mars-tab" tabindex="0"  role="tabpanel">
+      <h2 class="fs-800 uppercase ff-serif">Nakuru</h2>
+
+      <p> is a city in the Rift Valley region of Kenya. It currently serves as the 
+        capital of Nakuru County, and formerly as the capital of Rift Valley Province. 
+        As of this year, Nakuru had an urban and rural population of 670,674 inhabitants,
+        [1] making it the largest urban center in the Rift Valley, with Eldoret in Uasin Gishu County following closely behind</p>
+      
+      <div class="destination-meta flex">
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Avg. distance</h3>
+          <p class="ff-serif uppercase">9000km</p>
+        </div>
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Est. travel time</h3>
+          <p class="ff-serif uppercase">12hrs</p>
+        </div>
+      </div>
+    </article>
+    
+    <!-- Europa -->
+    <article hidden class="destination-info flow" id="europa-tab" tabindex="0"  role="tabpanel">
+      <h2 class="fs-800 uppercase ff-serif">Nairobi</h2>
+
+      <p> is the capital and largest city of Kenya. The name comes from the Maasai 
+        phrase Enkare Nyorobi, which translates to "place of cool waters", a reference 
+        to the Nairobi River which flows through the city. The city proper had a population of 4,397,073 in the 2019 census, 
+        while the metropolitan area has a population of 9,354,580. The city is popularly referred to as the Green City in the Sun.</p>
+      <div class="destination-meta flex">
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Avg. distance</h3>
+          <p class="ff-serif uppercase">15000km</p>
+        </div>
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Est. travel time</h3>
+          <p class="ff-serif uppercase">48hrs</p>
+        </div>
+      </div>
+    </article>
+    
+    <!-- Titan -->
+    <article hidden class="destination-info flow" id="titan-tab" tabindex="0"  role="tabpanel">
+      <h2 class="fs-800 uppercase ff-serif">Mombasa</h2>
+
+      <p> is a coastal city in southeastern Kenya along the Indian Ocean. The town is known as the white and blue city in Kenya. 
+        It is the country's oldest (circa 900 AD) and second-largest city (after the capital Nairobi), 
+        with a population of about 1,208,333 people according
+         to the 2022 census. Its metropolitan region is the second-largest in the country, 
+         and has a population of 3,528,940 people</p>
+      
+      <div class="destination-meta flex">
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Avg. distance</h3>
+          <p class="ff-serif uppercase">12000 km</p>
+        </div>
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Est. travel time</h3>
+          <p class="ff-serif uppercase">24hrs</p>
+        </div>
+      </div>
+    </article>
+  </main>
+  
+
+
+
+  <script src="index.js"></script>
+</body>
+</html>

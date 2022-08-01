@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png"> -->
+  <link rel="icon" type="image/png" href="travlfav.png">
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+      rel="stylesheet">
+      <!-- <link rel="stylesheet" href="css/all.min.css"> -->
+    <!-- <link rel="stylesheet" href="css/fontawesome.min.css"> -->
+    <script src="https://kit.fontawesome.com/582c89d25c.js" crossorigin="anonymous"></script>
+
+
+      
+  <!-- Our custom CSS -->
+  <link rel="stylesheet" href="index.css">
+  <title>Frontend Mentor | Space tourism website</title>
+  <script src="navigation.js" defer></script>
+  <script src="tabs.js" defer></script>
+  <script src="index.js" defer></script>
+
+</head>
+
+
+
+<div class="crew">
+  <a class="skip-to-content" href="#main">Skip to content</a>
+  <header class="primary-header flex">
+    <div>
+      <img src="lion.png" alt="space tourism logo" class="logo">
+    </div>
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation"><i class="fa-solid fa-bars fa-2x" style="color: #fff" aria-hidden="true"></i></button>
+    <nav> 
+        <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+            <li><a class="ff-sans-cond uppercase text-yellow letter-spacing-2" href="index.html">Home</a>
+            <li><a class="ff-sans-cond uppercase text-yellow letter-spacing-2" href="destination.html">Location</a>
+            <li class="active"><a class="ff-sans-cond uppercase text-yellow letter-spacing-2" href="crew.html">Team</a>
+            <li><a class="ff-sans-cond uppercase text-yellow letter-spacing-2" href="technology.html">Vehicles</a>
+        </ul>
+    </nav>
+  </header>
+  <body>
+  
+  <div id="main" class="grid-container grid-container--crew flow">
+    <h1 class="numbered-title"><span aria-hidden="true">02</span> Meet your team</h1>
+    
+    <div class="dot-indicators flex" role="tablist" aria-label="crew member list">
+      <button aria-selected="true" aria-controls="commander-tab" role="tab" data-image="commander-image" tabindex="0"><span class="sr-only">The commander</span></button>
+      <button aria-selected="false" aria-controls="mission-tab" role="tab" data-image="mission-image" tabindex="-1"><span class="sr-only">The mission specialist</span></button>
+      <button aria-selected="false" aria-controls="pilot-tab" role="tab" data-image="pilot-image" tabindex="-1"><span class="sr-only">The pilot</span></button>
+      <button aria-selected="false" aria-controls="crew-tab" role="tab" data-image="crew-image" tabindex="-1"><span class="sr-only">The crew engineer</span></button>
+    </div>
+    
+    <!-- commander -->
+    <article class="crew-details flow" id="commander-tab" role="tabpanel" tabindex="0">
+      <header class="flow flow--space-small">
+        <h2 class="fs-600 ff-serif uppercase">Driver</h2>
+        <p class="fs-700 uppercase ff-serif">Pete Jameson</p>
+      </header>
+      <p>Pete Jameson is an American driver, former presidents driver 
+      and former mechanical engineer. He launched into crew for the third time as 
+      captain of Kenyan drivers.</p>
+    </article> 
+    
+    <!-- mission specialist -->
+    <article hidden class="crew-details flow" id="mission-tab" role="tabpanel" tabindex="0">
+      <header class="flow flow--space-small">
+        <h2 class="fs-600 ff-serif uppercase">Mission Specialist</h2>
+        <p class="fs-700 uppercase ff-serif">Richie Blacksmith</p>
+      </header>
+      <p>Richie Blacksmith is the founder and CEO of Kenya bus service. Shuttleworth became the first South
+        African to become a CEO in Kenya.</p>
+    </article> 
+    
+    <!-- pilot -->
+    <article hidden class="crew-details flow" id="pilot-tab" role="tabpanel" tabindex="0">
+      <header class="flow flow--space-small">
+        <h2 class="fs-600 ff-serif uppercase">Pilot</h2>
+        <p class="fs-700 uppercase ff-serif">Denis Taomo</p>
+      </header>
+      <p>Pilot on the first operational flight to Mombasa. Denis is a commander in the Kenyan air force where
+        he pilots an F/A-18.He was a crew member of Expedition 64, and served as a
+        station systems flight engineer.</p>
+    </article> 
+    
+    <!-- engineer -->
+    <article hidden class="crew-details flow" id="crew-tab" role="tabpanel" tabindex="0">
+      <header class="flow flow--space-small">
+        <h2 class="fs-600 ff-serif uppercase">Mechanical Engineer</h2>
+        <p class="fs-700 uppercase ff-serif">Vicmas Dollar</p>
+      </header>
+      <p>Vicmas Dollar is an Iranian kenyan engineer and co-founder of Toolix Systems.
+        Ansari was the fourth self-made millionaire entreprenuer, the first self-funded person to
+        launch a local made vehicle</p>
+    </article> 
+
+    <img id="drivers" src="drvers.jpg" width="550px" height="475px">
+    
+    
+    <!-- <picture id="commander-image">
+      <source srcset="assets/crew/image-douglas-hurley.webp" type="image/webp">
+      <img src="assets/crew/image-douglas-hurley.png" alt="Douglas Hurley">
+    </picture>
+    <picture hidden id="mission-image">
+      <source srcset="assets/crew/image-mark-shuttleworth.webp" type="image/webp">
+      <img src="assets/crew/image-mark-shuttleworth.png" alt="Mark Shuttleworth">
+    </picture>
+    <picture hidden id="pilot-image">
+      <source srcset="assets/crew/image-victor-glover.webp" type="image/webp">
+      <img src="assets/crew/image-victor-glover.png" alt="Victor Glover">
+    </picture>
+      <source srcset="assets/crew/image-anousheh-ansari.webp" type="image/webp">
+      <img src="assets/crew/image-anousheh-ansari.png" alt="Anousheh Ansari">
+    </picture> -->
+  </div>
+</div>
+
+  <script src="index.js"></script>
+</body>
+</html>
